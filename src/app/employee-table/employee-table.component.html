@@ -1,0 +1,38 @@
+<h2 class="text-center"> Employees</h2>
+<div class="card">
+  <h3> <div class="card-header">
+        Current Active Employees
+      </div>
+    </h3> 
+    <div class="card-body">
+<table class="table table-hover">
+    <thead>
+        <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>LastName</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Position</th>
+</tr>    
+</thead>
+<tbody>
+    
+    <tr *ngFor="let employee of employees">
+        <td>{{employee.id}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.position}}</td>
+        <td><button class="btn btn-danger m-1" (click)="deleteEmployee(employee.id)">Delete</button>
+            <button class="btn btn-primary" (click)="editEmployee(employee.id)">Edit</button>
+        </td>
+    </tr>
+
+</tbody>
+</table>
+</div>
+</div>
+<button class="btn btn-primary text-center" >Pelona Bootstrap</button>
+
